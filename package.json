@@ -1,5 +1,8 @@
 {
-  "name": "ts-react-comp-lib-template",
+  "name": "@radufilipescu/ts-react-comp-lib-template",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/radufilipescu"
+  },
   "version": "0.0.1",
   "description": "A template for creating Typescript React components library",
   "scripts": {
