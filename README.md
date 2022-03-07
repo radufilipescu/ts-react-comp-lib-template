@@ -36,3 +36,6 @@ When installing the new package, use the following command:
 
 If the repository is private, the end developer must obtain a github accesss token and configure the .npmrc file
 
+### Step 3 - adding styles
+> npm install postcss rollup-plugin-postcss --save-dev
+  - configure rollup.config.js to use postcss plugin
