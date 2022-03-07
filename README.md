@@ -25,10 +25,14 @@ Your .npmrc file needs to have the following lines:
 > //npm.pkg.github.com/:_authToken=YOUR_AUTH_TOKEN
 
 !!! Make sure that package.json name & publishConfig.registry fields are scoped to the github username !!!
-  - package.json.name: "@SCOPE_NAME/project_name"
+  - package.json.name: "@YOUR_GITHUB_USERNAME/REPOSITORY_NAME"
   - package.json.publishConfig.registry: "https://npm.pkg.github.com/YOUR_GITHUB_USERNAME"
-  - SCOPE_NAME is same as YOUR_GITHUB_USERNAME
 
 When publishing, use the following command:
 > npm publish --registry https://registry.npmjs.org/
+
+When installing the new package, use the following command:
+> npm install @YOUR_GITHUB_USERNAME/REPOSITORY_NAME
+
+If the repository is private, the end developer must obtain a github accesss token and configure the .npmrc file
 
