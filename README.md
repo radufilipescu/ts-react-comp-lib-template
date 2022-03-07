@@ -18,7 +18,7 @@ A template for creating Typescript React components library
 npm user configuration file:
   - create a .npmrc in your home directory 
   - linux: "~/.npmrc"
-  - windows: c:\Users\YOUR_WINDOWS_USERNAME\.npmrc
+  - windows: c:\Users\YOUR_WINDOWS_USERNAME\\.npmrc
 
 Your .npmrc file needs to have the following lines:
 > @YOUR_GITHUB_USERNAME:registry=https://npm.pkg.github.com/
