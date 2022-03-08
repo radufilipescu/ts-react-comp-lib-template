@@ -38,4 +38,17 @@ If the repository is private, the end developer must obtain a github accesss tok
 
 ### Step 3 - adding styles
 > npm install postcss rollup-plugin-postcss --save-dev
-  - configure rollup.config.js to use postcss plugin
+  - then configure rollup.config.js to root directory to use postcss plugin
+
+### Step 4 - testing your library components
+> npm install @testing-library/react jest @types/jest --save-dev
+  - then add jest.config.js to root directory
+
+> npm install @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript babel-jest --save-dev
+  - then add babel.config.js to root directory
+
+> npm install react-dom --save-dev
+  - without this, tests fail
+
+> npm install identity-obj-proxy --save-dev
+  - this handles css imports while testing components with jest & testing-library
