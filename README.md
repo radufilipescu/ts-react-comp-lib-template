@@ -2,7 +2,7 @@
 A template for creating Typescript React components library
 
 ## Create your library from scratch cheatsheet:
-### Step 1 - Installing dev dependencies
+### Step 1 - installing dev dependencies
 > npm init
 
 > npm install typescript tslib react @types/react --save-dev
@@ -14,7 +14,7 @@ A template for creating Typescript React components library
   - used to bundle the library into dist files
   - you then need to add a rollup.config.js
 
-### Step 2 - NPM publishing
+### Step 2 - npm publishing
 npm user configuration file:
   - create a .npmrc in your home directory 
   - linux: "~/.npmrc"
@@ -48,7 +48,18 @@ If the repository is private, the end developer must obtain a github accesss tok
   - then add babel.config.js to root directory
 
 > npm install react-dom --save-dev
-  - without this, tests fail
+  - running tests will fail if react-dom package is missing
 
 > npm install identity-obj-proxy --save-dev
   - this handles css imports while testing components with jest & testing-library
+
+### Step 5 - storybook
+> npx sb init
+
+### Step 6 - recreating package-lock.json
+It's better to recreate the lock file from a fresh npm install (using package.json),
+as it includes missing peer dependencies. After next command, package-lock.json will be much larger.
+
+Before running the next command, clear node_modules folder & delete package-lock.json
+
+> npm install
