@@ -3,13 +3,16 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/radufilipescu"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A template for creating Typescript React components library",
   "scripts": {
-    "rollup": "rollup -c",
+    "start": "rollup -c -w",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "clear-dist": "del-cli ./dist",
+    "build": "npm run clear-dist && rollup -c",
+    "prepublishOnly": "npm run build"
   },
   "author": "Your name here",
   "license": "MIT",
@@ -32,6 +35,7 @@
     "@types/react": "^17.0.39",
     "babel-jest": "^27.5.1",
     "babel-loader": "^8.2.3",
+    "del-cli": "^4.0.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "postcss": "^8.4.8",

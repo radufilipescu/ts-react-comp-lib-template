@@ -56,7 +56,11 @@ If the repository is private, the end developer must obtain a github accesss tok
 ### Step 5 - storybook
 > npx sb init
 
-### Step 6 - recreating package-lock.json
+### Step 6 - setting up npm scripts
+> npm install del-cli --save-dev
+  - used by "clear-dist" npm script
+
+### Step 7 - recreating package-lock.json
 It's better to recreate the lock file from a fresh npm install (using package.json),
 as it includes missing peer dependencies. After next command, package-lock.json will be much larger.
 
